@@ -1,5 +1,5 @@
 import sst
-
+import os
 
 # Define SST core options
 sst.setProgramOption("timebase", "1ps")
@@ -34,7 +34,7 @@ ariel.addParams({
     "arielmode" : 0,
     "appargcount" : 0,
     "max_insts" : 10000,
-    "executable" : "./app/opal_test",
+    "executable" : os.environ['SST_ROOT']+"/sst-elements/src/sst/elements/Opal/tests/app/opal_test",
     "node" : 0,
     "launchparamcount" : 1,
     "launchparam0" : "-ifeellucky",
